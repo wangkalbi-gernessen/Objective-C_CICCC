@@ -64,7 +64,8 @@ int main(int argc, const char * argv[]) {
                     int length = strInput.length;
                     NSLog(@"%d", length);
                 } else if ([option isEqualToString:@"8"]) {
-                    
+                    NSString* finish = [[strInput componentsSeparatedByCharactersInSet:[[NSCharacterSet letterCharacterSet] invertedSet]] componentsJoinedByString:@""];
+                    NSLog(@"%@", finish);
                 } else if (option == nil || [option isEqualToString:@"9"]) {
                     NSLog(@"Next String!");
                     break;
