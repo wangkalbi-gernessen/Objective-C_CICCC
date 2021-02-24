@@ -32,7 +32,7 @@ getUserInput(int maxLength, NSString *prompt) {
 // C String vs NSString
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
+        NSLog(@"%d",10);
         while (YES) {
             NSString *strInput = getUserInput(255, @"\nEnter your String ('q' to quit): ");
             if ([strInput isEqualToString:@"q"]) { break; }
