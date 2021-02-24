@@ -28,13 +28,14 @@
 
 - (int) countFitInAnotherBox: (Box*) box {
     float main = [self calculateVolume:[self width] height:[self height] length:[self length]];
-    float sub = [box calculateVolume:[box width] height:[box height] length:[box height]];
+    float sub = [box calculateVolume:[box width] height:[box height] length:[box length]];
+    NSLog(@"%.2f", main);
+    NSLog(@"%.2f", sub);
     if (main > sub) {
         return main / sub;
     } else {
         return sub / main;
     }
-    return 3;
 }
     
 @end
