@@ -27,6 +27,13 @@
 }
 
 - (int) countFitInAnotherBox: (Box*) box {
+    float main = [self calculateVolume:[self width] height:[self height] length:[self length]];
+    float sub = [box calculateVolume:[box width] height:[box height] length:[box height]];
+    if (main > sub) {
+        return main / sub;
+    } else {
+        return sub / main;
+    }
     return 3;
 }
     

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithWidth: (float) width AndHeight: (float) height AndLength: (float) length;
 - (float) calculateVolume: (float) width height: (float) height length: (float) length;
-- (int) count: (Box *) box;
+- (int) countFitInAnotherBox: (Box*) box;
 
 @end
 
