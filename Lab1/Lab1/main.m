@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-// prompts the message and takes user input from the command line (C) and returns as NSString
+// prompts the message and takes user input from the command line (C) and returns as NSStringq
 NSString *
 getUserInput(int maxLength, NSString *prompt) {
     if (maxLength < 1) {
