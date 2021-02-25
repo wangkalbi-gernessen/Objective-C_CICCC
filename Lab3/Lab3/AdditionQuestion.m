@@ -24,16 +24,29 @@
                 _question = [NSString stringWithFormat: @"%ld + %ld ?", _left, _right];
                 break;
             case 1: op = '-';
-                _answer = left - right;
-                _question = [NSString stringWithFormat: @"%ld - %ld ?", _left, _right];
+                if (left > right) {
+                    _answer = left - right;
+                    _question = [NSString stringWithFormat: @"%ld - %ld ?", _left, _right];
+                } else {
+                    _answer = right - left;
+                    _question = [NSString stringWithFormat: @"%ld - %ld ?", _right, _left];
+                }
                 break;
             case 2: op = '*';
                 _answer = _left * _right;
                 _question = [NSString stringWithFormat: @"%ld * %ld ?", _left, _right];
                 break;
             case 3: op = '/';
-                _answer = left / right;
-                _question = [NSString stringWithFormat: @"%ld / %ld ?", _left, _right];
+                if (left > right && left % right == 0) {
+                    _answer = left / right;
+                    _question = [NSString stringWithFormat: @"%ld / %ld ?", _left, _right];
+                } else if (right > left && right % left == 0) {
+                    _answer = right / left;
+                    _question = [NSString stringWithFormat: @"%ld / %ld ?", _right, _left];
+                } else {
+                    _answer = left / right;
+                    _question = [NSString stringWithFormat: @"%ld / %ld ?", _left, _right];
+                }
                 break;
         }
     }
