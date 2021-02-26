@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithContactLists: (NSMutableArray *) contactLists;
 - (void) addContact: (Contact *) newContact;
+- (BOOL) checkDuplicate: (Contact *) newContact;
 
 @end
 

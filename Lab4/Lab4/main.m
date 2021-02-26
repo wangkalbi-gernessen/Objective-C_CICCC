@@ -69,6 +69,13 @@ int main(int argc, const char * argv[]) {
                                 NSLog(@"not found");
                             }
                         }
+                    } else if ([chosenMenu isEqualToString:@"history"]) {
+                        NSMutableArray *newMutableArray = [contactLists subarrayWithRange: NSMakeRange(contactLists.count - 1, 3)];
+                        for (int i = [newMutableArray count]; i > 0; i--) {
+                            NSLog(@"{Name: %@, Email: %@}", [newMutableArray[i] name], [newMutableArray[i] email]);
+                        }
+                    } else {
+                        NSLog(@"No such a mode exists");
                     }
                 }
             } else {

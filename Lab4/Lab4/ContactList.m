@@ -20,7 +20,20 @@
 }
 
 - (void) addContact: (Contact *) newContact {
-    [_contactList addObject: newContact];
+    if ([self checkDuplicate: newContact]) {
+        [_contactList addObject: newContact];
+    } else {
+        NSLog(@"The email already exitsts and cannot be created.");
+    }
+}
+
+- (BOOL) checkDuplicate: (Contact *) newContact {
+    for (int i = 0; i < [_contactList count]; i++) {
+        if (newContact.email == [_contactList[i] email]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 @end
