@@ -27,7 +27,7 @@ int main(int argc, const char * argv[]) {
             if (trimmedInput.intValue == 1) {
                 runOn = YES;
                 
-                NSMutableArray *contactLists = [NSMutableArray new];
+                NSMutableArray<Contact *> *contactLists = [NSMutableArray new];
                 ContactList *contactListObj = [[ContactList alloc] initWithContactLists: contactLists];
                 while(YES) {
                     InputCollector *inputResult = [[InputCollector alloc] init];
@@ -38,10 +38,13 @@ int main(int argc, const char * argv[]) {
                         Contact *contactB = [[Contact alloc] initWithName: username AndEmail: emailAddress];
                         [contactListObj addContact: contactB];
                     } else if ([chosenMenu isEqualToString:@"list"]) {
-                        int index = 0;
-                        for (Contact *name in contactLists) {
-                            index++;
-                            NSLog(@"%d:<%@>()", index , name.name);
+//                        int index = 0;
+//                        for (Contact *name in contactLists) {
+//                            index++;
+//                            NSLog(@"%d:<%@>()", index , name.name);
+//                        }
+                        for (int i = 0; i < [contactLists count]; i++) {
+                            NSLog(@"%d:<%@>()", i, [contactLists[i] name]);
                         }
                     } else if ([chosenMenu isEqualToString:@"quit"]) {
                         NSLog(@"\nFinish! Go back to top");
@@ -50,14 +53,18 @@ int main(int argc, const char * argv[]) {
                     } else if ([chosenMenu isEqualToString:@"show"]) {
                         NSString *indexNum = [inputResult inputForPrompt:@"\n Enter index number you want to see"];
                         int val = indexNum.intValue;
-                        
-                        for (Contact *name in contactLists) {
-                            if (index == val) {
-                                NSLog(@"%d:<%@>()", index , name.name);
+                        int notFoundCount = 0;
+                        for (int i = 0; i < [contactLists count]; i++) {
+                            if (val == i) {
+                                NSLog(@"%d:<%@>()", val, [contactLists[val] name]);
+                                break;
+                            }
+                            notFoundCount++;
+                            if (notFoundCount == [contactLists count]) {
+                                NSLog(@"not found");
                             }
                         }
-                        NSLog(@"not found");
-                    } else {
+                    } else if ([chosenMenu isEqualToString:@"find"]) {
                         NSLog(@"find");
                     }
                 }
