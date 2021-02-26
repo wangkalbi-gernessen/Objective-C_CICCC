@@ -10,7 +10,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        while(YES) {
+        BOOL gameOn = YES;
+        while(gameOn == YES) {
             NSLog(@"MATHS! There are 10 questions.");
             int right = 0;
             int wrong = 0;
@@ -32,6 +33,7 @@ int main(int argc, const char * argv[]) {
                 // stop game
                 if ([trimmedInput isEqualToString:@"quit"]) {
                     NSLog(@"Finish Game");
+                    gameOn = NO;
                     break;
                 // continue game
                 } else {
