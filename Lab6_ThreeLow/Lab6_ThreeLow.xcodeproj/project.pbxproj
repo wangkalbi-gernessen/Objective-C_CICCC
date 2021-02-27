@@ -10,6 +10,7 @@
 		FA70B3C425EA301100355385 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70B3C325EA301100355385 /* main.m */; };
 		FA70B3CD25EA339800355385 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70B3CC25EA339800355385 /* Dice.m */; };
 		FA70B3D625EAA34C00355385 /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70B3D525EAA34C00355385 /* InputController.m */; };
+		FA70B3DD25EAAFED00355385 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70B3DC25EAAFED00355385 /* GameController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		FA70B3CC25EA339800355385 /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		FA70B3D425EAA34C00355385 /* InputController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
 		FA70B3D525EAA34C00355385 /* InputController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputController.m; sourceTree = "<group>"; };
+		FA70B3DB25EAAFED00355385 /* GameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		FA70B3DC25EAAFED00355385 /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				FA70B3CC25EA339800355385 /* Dice.m */,
 				FA70B3D425EAA34C00355385 /* InputController.h */,
 				FA70B3D525EAA34C00355385 /* InputController.m */,
+				FA70B3DB25EAAFED00355385 /* GameController.h */,
+				FA70B3DC25EAAFED00355385 /* GameController.m */,
 			);
 			path = Lab6_ThreeLow;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA70B3CD25EA339800355385 /* Dice.m in Sources */,
+				FA70B3DD25EAAFED00355385 /* GameController.m in Sources */,
 				FA70B3C425EA301100355385 /* main.m in Sources */,
 				FA70B3D625EAA34C00355385 /* InputController.m in Sources */,
 			);

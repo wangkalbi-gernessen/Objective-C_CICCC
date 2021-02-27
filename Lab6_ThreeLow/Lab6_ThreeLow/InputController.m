@@ -19,7 +19,6 @@
 }
 
 - (NSString *) treatUserInput: (NSString *) userInput {
-    NSLog(@"%@", userInput);
     char game[10];
     char *startGame = fgets(game, 10, stdin);
     // convert char *result to NSString

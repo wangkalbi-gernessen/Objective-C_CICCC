@@ -20,7 +20,7 @@
 
 - (int) randomizeDice {
     // set 1 to 6
-_currentValue = arc4random_uniform(6) + 1;
+    _currentValue = arc4random_uniform(6) + 1;
     return _currentValue;
 }
 
