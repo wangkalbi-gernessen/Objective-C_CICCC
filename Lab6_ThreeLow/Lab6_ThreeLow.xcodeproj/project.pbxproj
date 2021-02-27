@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA70B3C425EA301100355385 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70B3C325EA301100355385 /* main.m */; };
 		FA70B3CD25EA339800355385 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70B3CC25EA339800355385 /* Dice.m */; };
+		FA70B3D625EAA34C00355385 /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70B3D525EAA34C00355385 /* InputController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		FA70B3C325EA301100355385 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA70B3CB25EA339800355385 /* Dice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
 		FA70B3CC25EA339800355385 /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
+		FA70B3D425EAA34C00355385 /* InputController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
+		FA70B3D525EAA34C00355385 /* InputController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				FA70B3C325EA301100355385 /* main.m */,
 				FA70B3CB25EA339800355385 /* Dice.h */,
 				FA70B3CC25EA339800355385 /* Dice.m */,
+				FA70B3D425EAA34C00355385 /* InputController.h */,
+				FA70B3D525EAA34C00355385 /* InputController.m */,
 			);
 			path = Lab6_ThreeLow;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			files = (
 				FA70B3CD25EA339800355385 /* Dice.m in Sources */,
 				FA70B3C425EA301100355385 /* main.m in Sources */,
+				FA70B3D625EAA34C00355385 /* InputController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
