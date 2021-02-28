@@ -19,13 +19,14 @@
 }
 
 - (NSString *) treatUserInput: (NSString *) userInput {
-    char game[10];
-    char *startGame = fgets(game, 10, stdin);
+    NSLog(@"%@",userInput);
+    char menu[256];
+    char *menuInput = fgets(menu, 256, stdin);
     // convert char *result to NSString
-    NSString *str1 = [NSString stringWithUTF8String: startGame];
+    NSString *menuList = [NSString stringWithUTF8String: menu];
     // remove all whitespaces of *str
     NSCharacterSet *whitespaces = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-    NSString *trimmedInput = [str1 stringByTrimmingCharactersInSet: whitespaces];
+    NSString *trimmedInput = [menuList stringByTrimmingCharactersInSet: whitespaces];
     return trimmedInput;
 }
 

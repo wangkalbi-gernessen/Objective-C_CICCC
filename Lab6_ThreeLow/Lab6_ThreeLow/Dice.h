@@ -13,8 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property int currentValue;
 
-- (instancetype)init;
-- (int) randomizeDice;
+- (NSString *) randomizeDice;
 
 @end
 

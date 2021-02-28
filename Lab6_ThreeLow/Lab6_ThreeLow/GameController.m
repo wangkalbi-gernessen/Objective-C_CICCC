@@ -9,14 +9,36 @@
 
 @implementation GameController
 
-- (instancetype)initWithAllPlayerDice: (NSMutableDictionary *) allPlayersDice AndCurrentPlayerDice: (NSMutableArray *) currentPlayerDice
+- (instancetype)initWithCurrentDices: (NSMutableArray *) currentDices AndHeldDices: (NSMutableArray *) heldDices
 {
     self = [super init];
     if (self) {
-        _allPlayersDice = allPlayersDice;
-        _currentPlayersDice = currentPlayerDice;
+        _currentDices = currentDices;
+        _heldDices = heldDices;
     }
     return self;
+}
+
+- (void) displayCurrentStats: (NSMutableArray *) currentDices rollCounts: (int) rollCount {
+    NSString *stats = @"";
+    
+    NSLog(@"Remaining Rolls: %d", rollCount);
+    NSLog(@"-------------------");
+    NSLog(@"--  Current Dice --");
+    for (int i = 0; i < [currentDices count]; i++) {
+        stats = [NSString stringWithFormat:@" %@ ", currentDices[i]];
+    }
+    NSLog(@"%@",stats);
+    NSLog(@"-------------------");
+}
+
+- (void) holdDie: (int) holdIndex currentDices: (NSMutableArray *) currentDice heldDices: (NSMutableArray *) heldDices {
+    if (holdIndex >= 1 && holdIndex <= 6) {
+        [heldDices addObject:currentDice[holdIndex - 1]];
+        
+    } else {
+        NSLog(@"The index number is not found");
+    }
 }
 
 @end

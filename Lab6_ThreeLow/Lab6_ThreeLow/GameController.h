@@ -11,11 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GameController : NSObject
 
-@property NSMutableDictionary *allPlayersDice;
-@property NSMutableArray *currentPlayersDice;
+@property NSMutableArray *currentDices;
+@property NSMutableArray *heldDices;
 
-- (instancetype)initWithAllPlayerDice: (NSMutableDictionary *) allPlayersDice AndCurrentPlayerDice: (NSMutableArray *) currentPlayerDice
-
+- (instancetype)initWithCurrentDices: (NSMutableArray *) currentDices AndHeldDices: (NSMutableArray *) heldDices;
+- (void) displayCurrentStats: (NSMutableArray *) currentDicesStats rollCounts: (int) rollCount;
+- (void) holdDie: (int) holdIndex currentDices: (NSMutableArray *) currentDice heldDices: (NSMutableArray *) heldDices;
 
 @end
 
