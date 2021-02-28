@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GameController : NSObject
 
-@property NSMutableArray *currentDices;
+@property NSArray *currentDices;
 @property NSMutableArray *heldDices;
 
 - (instancetype)initWithCurrentDices: (NSMutableArray *) currentDices AndHeldDices: (NSMutableArray *) heldDices;

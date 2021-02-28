@@ -31,36 +31,47 @@ int main(int argc, const char * argv[]) {
                 while(rollCount > 0) {
                     InputController *inputCT = [[InputController alloc] init];
                     NSString *rollInput = [inputCT treatUserInput: @"\n'roll' - to roll the dice\n'hold' - to hold the dice\n'reset' - to un-hold all dice\n'done' - to end the game\n'display' - to show current stats"];
+                    
                     if ([rollInput isEqualToString:@"roll"]) {
                         Dice *dice = [[Dice alloc] init];
-                        NSString *first = [dice randomizeDice];
-                        [currentDices addObject:first];
-                        NSString *second = [dice randomizeDice];
-                        [currentDices addObject:second];
-                        NSString *third = [dice randomizeDice];
-                        [currentDices addObject:third];
-                        NSString *fourth = [dice randomizeDice];
-                        [currentDices addObject:fourth];
-                        NSString *fifth = [dice randomizeDice];
-                        [currentDices addObject:fifth];
-                        NSLog(@"%ld", [currentDices count]);
+                        if (rollCount == 5) {
+                            NSString *first = [dice randomizeDice];
+                            [currentDices addObject:first];
+                            NSString *second = [dice randomizeDice];
+                            [currentDices addObject:second];
+                            NSString *third = [dice randomizeDice];
+                            [currentDices addObject:third];
+                            NSString *fourth = [dice randomizeDice];
+                            [currentDices addObject:fourth];
+                            NSString *fifth = [dice randomizeDice];
+                            [currentDices addObject:fifth];
+                            NSLog(@"%ld", [currentDices count]);
+                            
                         
-                        
-                        rollCount--;
-                        [gameCT displayCurrentStats:currentDices rollCounts:rollCount];
-                        
-                        
+                            rollCount--;
+                            [gameCT displayCurrentStats:currentDices rollCounts:rollCount];
+                        } else {
+                            for (int i = 0; i < [currentDices count]; i++) {
+                                // is goint to add 'held' if statement
+                                [currentDices replaceObjectAtIndex:i withObject:[dice randomizeDice]];
+                            }
+                            rollCount--;
+                            [gameCT displayCurrentStats:currentDices rollCounts:rollCount];
+                        }
                     } else if ([rollInput isEqualToString:@"hold"]) {
                         NSString *holdDice = [inputCT treatUserInput:@"Enter the number of the die: "];
                         int heldIndex = holdDice.intValue;
+//                        currentDices[heldIndex - 1];
                         [gameCT holdDie:heldIndex currentDices:currentDices heldDices:heldDices];
 //                        NSLog(@"%d", [heldDices count]);
-                        
+                        [gameCT displayCurrentStats:currentDices rollCounts:rollCount];
                         
                         
                     } else if ([rollInput isEqualToString:@"reset"]) {
+//                        NSLog(@"reset");
                         [currentDices removeAllObjects];
                         [heldDices removeAllObjects];
+                        
                     } else if ([rollInput isEqualToString:@"done"]) {
                         NSLog(@" GAME OVER ");
                         runOn = NO;
