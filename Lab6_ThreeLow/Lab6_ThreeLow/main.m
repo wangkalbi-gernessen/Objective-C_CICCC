@@ -63,17 +63,18 @@ int main(int argc, const char * argv[]) {
                                 NSLog(@"Please hold a dice");
                             }
                         }
-                        
                     } else if ([rollInput isEqualToString:@"hold"]) {
                         if (isHeld == NO) {
                             NSString *holdDice = [inputCT treatUserInput:@"Enter the number of the die: "];
                             int heldIndex = holdDice.intValue;
                             if ([heldDices containsObject:[NSNumber numberWithInt:heldIndex - 1]]) {
                                 NSLog(@"The number is already held. Enter other numbers.");
-                            } else {
+                            } else if (![heldDices containsObject:[NSNumber numberWithInt:heldIndex - 1]]) {
                                 [gameCT holdDie:heldIndex heldDices:heldDices];
                                 [gameCT displayCurrentStats:currentDices rollCounts:rollCount];
                                 isHeld = YES;
+                            } else {
+                                NSLog(@"No number is entered");
                             }
                         } else {
                             NSLog(@"You've already held a dice. Select other modes.");

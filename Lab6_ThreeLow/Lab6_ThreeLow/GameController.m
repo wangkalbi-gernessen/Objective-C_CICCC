@@ -33,7 +33,6 @@
             if ([NSNumber numberWithInt:i] == _heldDices[j]) {
                 isFound = YES;
                 stats = [stats stringByAppendingFormat:@" [%@] ", currentDices[i]];
-                _score += [self changeToIntValue: currentDices[i]];
             }
         }
         if (isFound == NO) {
@@ -68,6 +67,7 @@
     if (holdIndex >= 1 && holdIndex <= 5) {
         NSNumber *index = [NSNumber numberWithInt:holdIndex - 1];
         [heldDices addObject: index];
+        _score += [self changeToIntValue: _currentDices[holdIndex - 1]];
     } else {
         NSLog(@"The index number is not found");
     }
