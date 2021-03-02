@@ -11,6 +11,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AdditionQuestion : NSObject
 
+@property NSString *question;
+@property NSInteger answer;
+@property NSInteger left;
+@property NSInteger right;
+
+- (instancetype)initWithLeft:(NSInteger) left right: (NSInteger) right;
+
 @end
 
 NS_ASSUME_NONNULL_END
