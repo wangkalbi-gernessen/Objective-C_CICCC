@@ -12,6 +12,7 @@
 		FA1CF4AD25EC16D700317424 /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CF4AC25EC16D700317424 /* ScoreKeeper.m */; };
 		FA1CF4B125EC170400317424 /* QuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CF4B025EC170400317424 /* QuestionManager.m */; };
 		FA70B3FD25EBF1C800355385 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA70B3FC25EBF1C800355385 /* main.m */; };
+		FA7DC77725F0008800D258D8 /* QuestionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7DC77625F0008800D258D8 /* QuestionFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		FA1CF4B025EC170400317424 /* QuestionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionManager.m; sourceTree = "<group>"; };
 		FA70B3F925EBF1C800355385 /* Lab5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab5; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA70B3FC25EBF1C800355385 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA7DC77525F0008800D258D8 /* QuestionFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionFactory.h; sourceTree = "<group>"; };
+		FA7DC77625F0008800D258D8 /* QuestionFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				FA1CF4AC25EC16D700317424 /* ScoreKeeper.m */,
 				FA1CF4AF25EC170400317424 /* QuestionManager.h */,
 				FA1CF4B025EC170400317424 /* QuestionManager.m */,
+				FA7DC77525F0008800D258D8 /* QuestionFactory.h */,
+				FA7DC77625F0008800D258D8 /* QuestionFactory.m */,
 			);
 			path = Lab5;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7DC77725F0008800D258D8 /* QuestionFactory.m in Sources */,
 				FA1CF4B125EC170400317424 /* QuestionManager.m in Sources */,
 				FA1CF4AD25EC16D700317424 /* ScoreKeeper.m in Sources */,
 				FA70B3FD25EBF1C800355385 /* main.m in Sources */,

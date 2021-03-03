@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSInteger answer;
 @property NSInteger left;
 @property NSInteger right;
+@property NSDate *startTime;
+@property NSDate *endTime;
 
 - (instancetype)initWithLeft:(NSInteger) left right: (NSInteger) right;
 
