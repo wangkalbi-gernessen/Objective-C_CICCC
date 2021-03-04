@@ -1,8 +1,8 @@
 //
 //  InputHandler.h
-//  Lab5
+//  Payments
 //
-//  Created by Kazunobu Someya on 2021-02-28.
+//  Created by Kazunobu Someya on 2021-03-03.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface InputHandler : NSObject
 
-- (NSString *) inputHandler: (NSString *) input;
+- (NSString *) treatUserInput: (NSString *) userInput;
 
 @end
 
