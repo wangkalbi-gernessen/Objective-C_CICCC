@@ -75,13 +75,9 @@
 		FA7DC78A25F02F9200D258D8 /* Payments */ = {
 			isa = PBXGroup;
 			children = (
-				FA7DC7C125F0D4C000D258D8 /* Apple */,
-				FA7DC7A925F04FAA00D258D8 /* Paypal */,
-				FA7DC7A325F04F8700D258D8 /* Amazon */,
-				FA7DC7A225F04F7900D258D8 /* Stripe */,
+				FA7DC7D525F1644E00D258D8 /* Delegatee */,
+				FA7DC7D425F1643700D258D8 /* Delegator */,
 				FA7DC78B25F02F9200D258D8 /* main.m */,
-				FA7DC79925F03CB500D258D8 /* PaymentGateway.h */,
-				FA7DC79A25F03CB500D258D8 /* PaymentGateway.m */,
 				FA7DC79325F0313D00D258D8 /* InputHandler.h */,
 				FA7DC79425F0313D00D258D8 /* InputHandler.m */,
 			);
@@ -122,6 +118,26 @@
 				FA7DC7C325F0D4CD00D258D8 /* ApplePaymentService.m */,
 			);
 			path = Apple;
+			sourceTree = "<group>";
+		};
+		FA7DC7D425F1643700D258D8 /* Delegator */ = {
+			isa = PBXGroup;
+			children = (
+				FA7DC79925F03CB500D258D8 /* PaymentGateway.h */,
+				FA7DC79A25F03CB500D258D8 /* PaymentGateway.m */,
+			);
+			path = Delegator;
+			sourceTree = "<group>";
+		};
+		FA7DC7D525F1644E00D258D8 /* Delegatee */ = {
+			isa = PBXGroup;
+			children = (
+				FA7DC7C125F0D4C000D258D8 /* Apple */,
+				FA7DC7A925F04FAA00D258D8 /* Paypal */,
+				FA7DC7A325F04F8700D258D8 /* Amazon */,
+				FA7DC7A225F04F7900D258D8 /* Stripe */,
+			);
+			path = Delegatee;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
